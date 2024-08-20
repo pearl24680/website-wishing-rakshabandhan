@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff3e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ffcc99;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            color: #a33b3b;
+        }
+        .content {
+            padding: 20px;
+        }
+        .about, .gallery, .message {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #a33b3b;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .message {
+            background-color: #ffd9b3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #ffcc99;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        /* Card Style */
+        .card {
+            background-color: #ff6666;
+            color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 10px;
+            font-size: 24px;
+            display: none; /* Initially hidden */
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #a33b3b;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 10px;
+            background-color: #a33b3b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #8b2d2d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Raksha Bandhan!</h1>
+    </header>
+    <div class="content">
+        <section class="about">
+            <h2>Enter Your Brother's Name</h2>
+            <input type="text" id="brotherName" placeholder="Your Brother's Name">
+            <button onclick="showName()">Show Name</button>
+        </section>
+        <section class="card" id="nameCard">
+            <!-- The brother's name will be displayed here -->
+        </section>
+        <section class="gallery">
+            <h2>Memories</h2>
+            
+        </section>
+        <section class="message">
+            <h2>A Special Message</h2>
+            <p>Dear Brother,</p>
+            <p>Thank you for always being there for me. You've been my protector, guide, and friend. On this special day, I want you to know how much I appreciate you. Happy Raksha Bandhan!</p>
+            <p>With love, from Pearl</p>
+        </section>
+    </div>
+    <footer>
+        <p>May this Raksha Bandhan bring you all the happiness and success. You're the best brother anyone could ask for!</p>
+    </footer>
+
+    <script>
+        function showName() {
+            var name = document.getElementById("brotherName").value;
+            if (name) {
+                var nameCard = document.getElementById("nameCard");
+                nameCard.style.display = "block"; // Show the card
+                nameCard.innerHTML = "Happy Raksha Bandhan, " + name + "!";
+            }
+        }
+    </script>
+</body>
+</html>
+
